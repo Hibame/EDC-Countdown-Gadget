@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<Module>
-  <ModulePrefs title="How many days until EDC?" />
-  <Content type="html">
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Module> 
+  <ModulePrefs title="How many days until EDC?" author="Bryan Clark" author_email="bryan@bryan-clark.com" title_url="http://rachel-fee.com/EDC.php" >
+    <Require feature="views" />
+  </ModulePrefs>
+  <Content type="html" view="home">
     <![CDATA[
-        <script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+    <script>var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
 <script>
     function countdown_clock(year, month, day, hour, minute, format)
     {
@@ -86,14 +88,19 @@
     }
 
     </script>
-<center>
-      <span style="font-size: 55; font-family: arial; color: white; margin-bottom:40px;">
-        <script>countdown_clock(13, 06, 21, 18, 0, 1)</script> 
-        until EDC!
-        <br/>
-      </span>
-    <img src="bgimages/EDCbg1.jpg"/>
-    </center>
-    ]]>
+      <div>
+        <span style="font-size: 40; font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif; font-weight: 300; color: black; margin-bottom:40px;">
+          <script>countdown_clock(13, 06, 21, 18, 0, 1)</script> until EDC!
+          <br/>
+        </span>
+      </div>
+    ]]>  
   </Content>
-</Module>​
+  <Content type="html" view="canvas"> 
+    <![CDATA[
+      <div>
+        <img src="http://rachel-fee.com/bgimages/EDCbg1.jpg" />
+      </div>
+    ]]> 
+  </Content>
+</Module>
